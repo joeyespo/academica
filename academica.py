@@ -24,6 +24,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/view')
+def view():
+    return render_template('view.html')
+
+
 # Run development server with the development settings
 if __name__ == '__main__':
     app.run(app.config['HOST'], app.config['PORT'], app.debug != False)
