@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  {% block metas %}{% endblock %}
   <title>{% block title %}Academica{% endblock %}</title>
   <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.ico') }}" />
   <link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
