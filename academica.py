@@ -29,6 +29,11 @@ def view():
     return render_template('view.html')
 
 
+@app.route('/<username>')
+def profile(username):
+    return render_template('profile.html', username=username)
+
+
 # Run development server with the development settings
 if __name__ == '__main__':
     app.run(app.config['HOST'], app.config['PORT'], app.debug != False)
