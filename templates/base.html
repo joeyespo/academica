@@ -5,7 +5,8 @@
   {% block metas %}{% endblock %}
   <title>{% block title %}Academica{% endblock %}</title>
   <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.ico') }}" />
-  <link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('.static', filename='bootstrap\css\bootstrap.css') }}" />
+ 
   {% block styles %}{% endblock %}
   {% block priority_scripts %}{% endblock %}
 </head>
