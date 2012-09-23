@@ -44,11 +44,6 @@ body
     color:black;
 }
 
-.logo
-{
-    padding:0px 0px 0px 10px;
-}
-
 .profile .container
 {
     background-color:White;
@@ -72,12 +67,18 @@ body
     border: 2;
 }
 
-.nameContainer
+.bioContainer
 {
     padding-top:25px;
     height:108px;
     margin-left:150px;
     padding-left:10px;
+    width:100%;
+}
+
+.nameContainer
+{
+    height:24px;
     width:100%;
 }
 
@@ -89,15 +90,10 @@ body
     float:left;
 }
 
-.horizontalFiller
+.quickBio
 {
-    float:left;
+    height:50px;
     width:100%;
-}
-
-.nameContainer .horizontalFiller
-{
-    height:24px;
 }
 
 .quickBio1
@@ -180,10 +176,53 @@ body
 .nameContainer .titles
 {
     padding-top:3px;
-    color:#999
+    padding-left:10px;
 }
 
+.bioContainer .titles
+{
+    color:#999;
+}
+
+.profile .content .titles
+{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.editButton
+{
+    margin-left:20px;   
+}
+
+.icon
+{
+    padding:0px 0px 0px 10px;
+}
+
+.usernav li a
+{
+    background-color:#333;
+    color:White;
+} 
+.usernav li a:hover
+{
+    background-color:#333;
+    color:White;
+} 
+
+
+.usernav .activeTab li a
+{
     
+    font-weight:bold;   
+    background-color:Aqua;
+}
+
+.usernav .activeTab hover
+{
+    
+}
 /*
 .navbar .brand 
 {

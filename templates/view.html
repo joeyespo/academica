@@ -11,7 +11,7 @@
     <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="/">
-                    <img class="logo" src="{{ url_for('.static', filename='academicaLogo.png') }}" />
+                    <img class="icon" src="{{ url_for('.static', filename='academicaLogo.png') }}" />
                 </a>
                 <div class="nav-collapse collapse">
                 <div class="nav"></div>
@@ -28,40 +28,44 @@
 <div class="profile">
     <!-- Profile Picture and NavButtons -->
     <!-- <div class="container"> -->
-    <div class="picav">
+    <div class="picnav">
         <div class="profpic"><img src="{{ url_for('.static', filename='profileSilhouette.png') }}" style="width:100%;height:100%" /></div>
-        <div class="nameContainer">
-            <div class="name">Tom Bachmann </div>
-            <div class="titles">PhD, Computer Science</div>
-            <div class="horizontalFillers"></div>
-            <div class="quickBio1">
-                <div class="titles">
-                    Me
-                    <br />
-                    Myself <br />
-                    Irene
-                </div>
+        <div class="bioContainer">
+            <div class="nameContainer">
+                <div class="name">Tom Bachmann </div>
+                <div class="titles">PhD, Computer Science</div>
             </div>
 
-            <div class="quickBio2">
-                <div class="titles">
-                    Test<br />
-                    test2<br />
+                <div class="quickBio1">
+                    <div class="titles">
+                        Me
+                        <br />
+                        Myself <br />
+                        More Info
+                    </div>
                 </div>
-            </div>
+
+                <div class="quickBio2">
+                    <div class="titles">
+                        Test<br />
+                        test2<br />
+                    </div>
+                </div>
+
             <div class="clear"></div>
 
         </div>
 
 
         <div class="usernav">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#">Home</a>
-                </li>
-                <li><a href="#">test2</a></li>
-                <li><a href="#">OOGIEBOOGIE</a></li>
-            </ul>
+                    <ul class="nav nav-tabs">
+                        <li class="activeTab">
+                            <a href="#">Profile</a>
+                        </li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">JobTalk</a></li>
+                        <li><a href="#">Workshop</a></li>
+                    </ul>
         </div>
 
     </div>
@@ -71,33 +75,33 @@
     <!-- Contact Info Pane -->
 
     <div class="contact">
-        <b>Contact Info</b>    <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/><br />
-        <img class="logo" src="{{ url_for('.static', filename='1348333996_email.png') }}" /> Email<br />
-        <img class="logo" src="{{ url_for('.static', filename='1348333993_phone.png') }}" /> Phone<br />
+        <b>Contact Info</b>    <img class="editButton" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"/><br />
+        <img class="icon" src="{{ url_for('.static', filename='1348333996_email.png') }}" /> Email<br />
+        <img class="icon" src="{{ url_for('.static', filename='1348333993_phone.png') }}" /> Phone<br />
         <br /><br />
-        <img class="logo" src="{{ url_for('.static', filename='online.png') }}" /> Online/Offline<br />
-        <img class="logo" src="{{ url_for('.static', filename='1348334523_group.png') }}" /> Refer a Friend<br />
+        <img class="icon" src="{{ url_for('.static', filename='online.png') }}" /> Online/Offline<br />
+        <img class="icon" src="{{ url_for('.static', filename='1348334523_group.png') }}" /> Refer a Friend<br />
     </div>
 
     <!-- Content panes -->
     <div class="content">
         <div class="leftContent">
-            <b>Positions</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
+            <div class="titles">Positions</div> <img class="editButton" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"/><br />
             <br /><br />
             Worked at...
             <br /><br /><br /><br />
-            <b>Education</b>  <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/>
+            <div class="titles">Education</div>   <img class="editButton" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"/><br />
             <br /><br />
             University of Cincinnati
         </div>
         <div class="centerContent">
-            <b>Research Interests</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
+            <div class="titles">Research Interests</div>  <img class="editButton" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"/><br />
             <br /><br />
             Artificial Intelligence
 
         </div>
         <div class="rightContent">
-            placeholder
+            <div class="titles">placeholder</div> <img class="editButton" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"/><br />
         </div>
     </div> 
     
