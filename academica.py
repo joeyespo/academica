@@ -22,12 +22,8 @@ app.config.from_envvar('SETTINGS_MODULE', silent=True)
 #Views
 @app.route('/')
 def index():
+    # TODO: signup, etc
     return render_template('index.html')
-
-
-@app.route('/view')
-def view():
-    return render_template('view.html')
 
 
 @app.route('/university/<username>')
