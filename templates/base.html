@@ -5,7 +5,9 @@
   {% block metas %}{% endblock %}
   <title>{% block title %}Academica{% endblock %}</title>
   <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.png') }}" />
+  {% block override_styles %}
   <link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
+  {% endblock %}
   {% block styles %}{% endblock %}
   <script src="{{ url_for('.static', filename='modernizr.js') }}"></script>
   {% block priority_scripts %}{% endblock %}
