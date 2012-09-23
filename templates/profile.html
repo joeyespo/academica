@@ -6,6 +6,9 @@
 
 {% block priority_scripts %}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script>
+    // TODO: add code to edit profiles fields
+</script>
 {% endblock %}
 
 {% block page %}
@@ -31,40 +34,26 @@
 <div class="profile">
     <!-- Profile Picture and NavButtons -->
     <div class="picnav">
-        <div class="profpic"><img src="{{ url_for('.static', filename='profileSilhouette.png') }}" style="width:100%;height:100%" /></div>
+        <div class="profpic"><img src="{{ user.photoUrl if user.photoUrl else url_for('.static', filename='profileSilhouette.png') }}" /></div>
         <div class="bioContainer">
             <div class="nameContainer">
-                <div class="name">Tom Bachmann </div>
-                <div class="titles">PhD, Computer Science</div>
+                <div class="name">{{ user.first }} {{ user.last }} </div>
+                <div class="titles">{{ user.credentials }}</div>
             </div>
-
-                <div class="quickBio1">
-                    <div class="titles">
-                        Me
-                        <br />
-                        Myself <br />
-                        More Info
-                    </div>
-                </div>
-
-                <div class="quickBio2">
-                    <div class="titles">
-                        Test<br />
-                        test2<br />
-                    </div>
-                </div>
-
+            <div class="quickBio1">
+                <div class="titles">{{ user.interests }} &nbsp;</div>
+            </div>
+            <div class="quickBio2">
+                <div class="titles">{{ user.expertise }} &nbsp;</div>
+            </div>
             <div class="clear"></div>
-
         </div>
 
 
         <div class="usernav">
             <ul class="nav nav-tabs">
-                <li class="active">
-                    <a href="#">Profile</a>
-                </li>
-                <li><a href="#">Research</a></li>
+                <li class="active"><a href="#">Profile</a></li>
+                <li><a href="research">Research</a></li>
                 <li><a href="#">JobTalk</a></li>
                 <li><a href="#">Workshop</a></li>
             </ul>
@@ -75,35 +64,96 @@
     <div class="greybar"></div>
 
     <!-- Contact Info Pane -->
-
     <div class="contact">
-        <b>Contact Info</b>    <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
-        <img class="icon" src="{{ url_for('.static', filename='email.png') }}" /> Email<br />
-        <img class="icon" src="{{ url_for('.static', filename='phone.png') }}" /> Phone<br />
+        <h5>Contact Info</h5>
+        <img class="icon" src="{{ url_for('.static', filename='email.png') }}" /> <a href="mailto:{{ user.email }}">{{ user.email }}</a><br />
+        <img class="icon" src="{{ url_for('.static', filename='phone.png') }}" /> <a href="tel:{{ user.phone }}">{{ user.phone }}</a><br />
         <br /><br />
-        <img class="icon" src="{{ url_for('.static', filename='online.png') }}" /> Online/Offline<br />
-        <img class="icon" src="{{ url_for('.static', filename='group.png') }}" /> Refer a Friend<br />
+        {% if user.available %}
+            <img class="icon" src="{{ url_for('.static', filename='online.png') }}" /> <a href="#">Available</a><br />
+        {% else %}
+            <img class="icon" src="{{ url_for('.static', filename='offline.png') }}" /> Unavailable<br />
+        {% endif %}
+        <img class="icon" src="{{ url_for('.static', filename='group.png') }}" /> <a href="#">Refer a Friend</a><br />
     </div>
 
     <!-- Content panes -->
+    <!-- TODO: make scrollable -->
     <div class="content">
         <div class="leftContent">
-            <div class="titles">Positions</div> <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
-            <br /><br />
-            Worked at...
-            <br /><br /><br /><br />
-            <div class="titles">Education</div>   <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
-            <br /><br />
-            University of Cincinnati
+            {% if user.education %}
+            <div class="profileSection">
+                <div class="titles">Education</div>
+                <br /><br />
+                {% for item in user.education %}
+                    <strong>{{ item.university }}</strong> <br />
+                    {{ item.field }} <br />
+                    {{ item.years }} <br />
+                    <br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
+
+            {% if user.skills %}
+            <div class="profileSection">
+                <div class="titles">Research Skills</div>
+                <br /><br />
+                {% for item in user.skills %}
+                    {{ item }} <br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
         </div>
         <div class="centerContent">
-            <div class="titles">Research Interests</div>  <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
-            <br /><br />
-            Artificial Intelligence
+            {% if user.positions %}
+            <div class="profileSection">
+                <div class="titles">Positions</div>
+                <br /><br />
+                {% for item in user.positions %}
+                    <strong>{{ item.title }}</strong> <br />
+                    {{ item.location }} <br />
+                    {{ item.years }} <br />
+                    <br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
 
+            {% if user.theory %}
+            <div class="profileSection">
+                <div class="titles">Theory Base</div>
+                <br /><br />
+                {% for item in user.theory %}
+                    {{ item }} <br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
         </div>
         <div class="rightContent">
-            <div class="titles">placeholder</div> <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+            {% if user.awards %}
+            <div class="profileSection">
+                <div class="titles">Awards</div>
+                <br /><br />
+                {% for item in user.awards %}
+                    {{ item }} <br /><br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
+
+            {% if user.languages %}
+            <div class="profileSection">
+                <div class="titles">Language</div>
+                <br /><br />
+                {% for item in user.languages %}
+                    {{ item }} <br />
+                {% endfor %}
+                <br />
+            </div>
+            {% endif %}
         </div>
     </div> 
     

@@ -1,4 +1,3 @@
- # -*- coding: utf-8 -*-
 """\
 Seed data.
 """
@@ -8,7 +7,9 @@ users = [
         'username': 'philip.grant',
         'first': 'Philip',
         'last': 'Grant',
+        'photoUrl': 'https://dl.dropbox.com/u/6578208/philip.png',
         'credentials': 'PhD',
+        'expertise': 'University of Edinburgh, Social Studies of Finance',
         'interests': '',
         'email': 'p.grant@uoe.edu',
         'phone': '412-555-5555',
@@ -18,34 +19,34 @@ users = [
             {
                 'university': 'University of California, Irvine',
                 'field': 'Ph.D., Sociocultural Anthropology',
-                'years': '2006 – 2012',
+                'years': '2006 - 2012',
             },
             {
                 'university': "Institut d'Etudes politiques de Paris",
-                'field': 'DEA, Sociétés et politiques comparées-monde musulman',
-                'years': '2003 – 2005',
+                'field': 'DEA, Societes et politiques comparees-monde musulman',
+                'years': '2003 - 2005',
             },
             {
                 'university': 'University of Oxford',
                 'field': 'BA, Modern History',
-                'years': '1995 – 1998',
+                'years': '1995 - 1998',
             },
         ],
         'positions': [
             {
                 'title': 'Research Fellow in Social Studies of Finance',
                 'location': 'University of Edinburgh',
-                'years': 'September 2012 – Present (1 month) Edinburgh, United Kingdom',
+                'years': 'September 2012 - Present (1 month) Edinburgh, United Kingdom',
             },
             {
                 'title': 'Teaching Assistant, School of Social Sciences',
                 'location': 'UC Irvine',
-                'years': 'January 2007 – December 2011 (5 years) Irvine, CA',
+                'years': 'January 2007 - December 2011 (5 years) Irvine, CA',
             },
             {
                 'title': 'Lecturer',
                 'location': 'Linguistic Anthropology\nUC Irvine',
-                'years': 'July 2011 – September 2011 (3 months) Irvine, CA',
+                'years': 'July 2011 - September 2011 (3 months) Irvine, CA',
             },
             {
                 'title': '',
@@ -89,12 +90,14 @@ users = [
         'username': 'lee.ngo',
         'first': 'Lee',
         'last': 'Ngo',
+        'photoUrl': None,
         'credentials': 'Founder',
+        'expertise': 'University of Edinburgh, Social Studies of Finance',
         'interests': '',
         'email': 'lee.ngo@gmail.com',
         'phone': '412-555-5555',
         'hours': 'I NEVER SLEEP',
-        'available': True,
+        'available': False,
         'education': [],
         'positions': [],
         'awards': [],
@@ -113,6 +116,7 @@ universities = [
 ]
 
 
+# Helper functions
 def find(function, items):
     for item in items:
         if function(item):

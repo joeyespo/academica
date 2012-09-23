@@ -36,7 +36,7 @@ body
 {
     margin:0;
     padding:0px 0px 0px 10px;
-    background-color:White;
+    background-color:white;
     height:100%;
     width:100%;
     font-family: 'Source Sans Pro', sans-serif;
@@ -46,7 +46,7 @@ body
 
 .profile .container
 {
-    background-color:White;
+    background-color:white;
 }
 
 .picnav
@@ -65,6 +65,10 @@ body
     padding-top:25px;
     float:left;
     border: 2;
+}
+.profpic img {
+    width:100%;
+    height:100%
 }
 
 .bioContainer
@@ -121,9 +125,9 @@ body
 
 .greybar
 {
-    height:5px;
+    height:8px;
     width:100%;
-    background-color:#999;
+    background-color:#ddd;
 }
 
 .contact
@@ -146,23 +150,28 @@ body
 }
 .profile .leftContent
 {
-    width:30%;
+    border-left: 1px solid #eee;
+    padding: 24px;
+    width:20%;
     height:100%;
     float:left;
 }
 
 .profile .centerContent
 {
-    width:30%;
-    height:100%;
+    border-left: 1px solid #eee;
+    padding: 24px;
+    width:20%;
     height:auto;
     float:left;
 }
 
 .profile .rightContent
 {
-    width:30%;
-    height:100%;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 24px;
+    width:20%;
     height:auto;
     float:left;
 }
@@ -203,13 +212,13 @@ body
 .usernav li a
 {
     background-color:#333;
-    color:White;
+    color:white;
 } 
 
 
 .usernav .active li a
 {
-    font-weight:bold;   
+    font-weight:bold;
 }
 
 .usernav .activeTab hover
@@ -220,7 +229,7 @@ body
 .navbar .brand 
 {
  
-    color:White;
+    color:white;
     float:left;
     margin:0;
     padding:0;
