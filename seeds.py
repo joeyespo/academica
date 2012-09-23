@@ -4,7 +4,7 @@ Seed data.
 
 users = [
     {
-        'username': 'lee_ngo',
+        'username': 'lee',
         'first': 'Lee',
         'last': 'Ngo',
         'email': 'lee.ngo@gmail.com',
@@ -20,7 +20,7 @@ universities = [
     {
         'username': 'LeeU',
         'title': 'Lee University',
-        'users': ['lee_ngo'],
+        'users': ['lee'],
     },
 ]
 
