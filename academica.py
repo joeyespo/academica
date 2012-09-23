@@ -28,7 +28,6 @@ def index():
 
 @app.route('/<username>/research')
 def research(username):
-    # TODO: data
     return render_template('research.html')
 
 
@@ -41,6 +40,7 @@ def university(username):
 
 
 @app.route('/<username>')
+@app.route('/<username>/')
 def profile(username):
     user = seeds.find(lambda x: x['username'] == username, seeds.users)
     if not user:
