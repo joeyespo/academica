@@ -5,6 +5,7 @@ The academic site.
 """
 
 from flask import Flask, render_template
+import seeds
 
 __version__ = '0.1'
 
@@ -32,16 +33,7 @@ def view():
 @app.route('/<username>')
 def profile(username):
     # TODO: Use real data
-    return render_template('profile.html', user={
-        'first': 'Lee',
-        'last': 'Ngo',
-        'email': 'lee.ngo@gmail.com',
-        'phone': '412-555-5555',
-        'hours': 'I NEVER SLEEP',
-        'available': True,
-        'education': 'TODO',    # HTML
-        'positions': 'TODO',    # HTML
-    })
+    return render_template('profile.html', user=seeds.users['lee.ngo'])
 
 
 # Run development server with the development settings
