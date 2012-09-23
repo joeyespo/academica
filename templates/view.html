@@ -6,27 +6,63 @@
 {% endblock %}
 
 {% block page %}
-<div class="profile">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <!--<div class="navbar-inner">-->
-            <div class="header">
-                              <a class="brand" href="#">Academica</a>
-
-                <form class="navbar-form pull-right">
-                    <input class="span2" type="text" placeholder="Email">
-                    <input class="span2" type="password" placeholder="Password">
-                    <button type="submit" class="btn">Sign in</button>
-                </form>
-                </div>
+<!-- Navigation Bar - Universal? -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">
+                    <img class="logo" src="{{ url_for('.static', filename='academicaLogo.png') }}" />
+                </a>
+                <div class="nav-collapse collapse">
+                <div class="nav"></div>
+                    <form class="navbar-form pull-right" >
+                        <input class="span2" type="text" placeholder="Email">
+                        <input class="span2" type="password" placeholder="Password">
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div
             </div>
-      </div>
-   
-<!--    </div
-       <div class="header">
-        <div class="span10">Academica<br /></div>
-        <div class="span2 offset10">Login Placeholder</div>
-    </div>-->
-    <div class="row"
-</div>
-</div>
+        </div>  
+    </div>
+        
+<div class="profile">
+    <!-- Profile Picture and NavButtons -->
+    <!-- <div class="container"> -->
+    <div class="picnav">
+        <div class="profpic"><img src="{{ url_for('.static', filename='profileSilhouette.png') }}" style="width:100%;height:100%" /></div>
+        <div class="name"><b>Tom Bachmann</b>  PhD, Computer Science</div>
+        <div class="usernav">
+            <!-- Insert Navigation Bar -->
+            test
+<!--        <div class="usernav">test</div>-->
+            </div>
+
+    </div>
+
+    <div class="greybar"></div>
+
+    <!-- Contact Info Pane -->
+    <div class="contact">
+        <b>Contact Info</b>    <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/><br />
+        <img class="logo" src="{{ url_for('.static', filename='1348333996_email.png') }}" /> Email<br />
+        <img class="logo" src="{{ url_for('.static', filename='1348333993_phone.png') }}" /> Phone<br />
+        <br /><br />
+        <img class="logo" src="{{ url_for('.static', filename='online.png') }}" /> Online/Offline<br />
+        <img class="logo" src="{{ url_for('.static', filename='1348334523_group.png') }}" /> Refer a Friend<br />
+    </div>
+
+    <!-- Content panes -->
+    <div class="education">
+        <b>Education</b>  <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/>
+        <br /><br />
+        University of Cincinnati
+    </div>
+    <div class="positions">
+        <b>Positions</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
+        <br /><br />
+        Worked at...
+
+    </div>
+    
+</div> 
 {% endblock %}
