@@ -28,20 +28,48 @@
 <div class="profile">
     <!-- Profile Picture and NavButtons -->
     <!-- <div class="container"> -->
-    <div class="picnav">
+    <div class="picav">
         <div class="profpic"><img src="{{ url_for('.static', filename='profileSilhouette.png') }}" style="width:100%;height:100%" /></div>
-        <div class="name"><b>Tom Bachmann</b>  PhD, Computer Science</div>
-        <div class="usernav">
-            <!-- Insert Navigation Bar -->
-            test
-<!--        <div class="usernav">test</div>-->
+        <div class="nameContainer">
+            <div class="name">Tom Bachmann </div>
+            <div class="titles">PhD, Computer Science</div>
+            <div class="horizontalFillers"></div>
+            <div class="quickBio1">
+                <div class="titles">
+                    Me
+                    <br />
+                    Myself <br />
+                    Irene
+                </div>
             </div>
+
+            <div class="quickBio2">
+                <div class="titles">
+                    Test<br />
+                    test2<br />
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+
+        <div class="usernav">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li><a href="#">test2</a></li>
+                <li><a href="#">OOGIEBOOGIE</a></li>
+            </ul>
+        </div>
 
     </div>
 
     <div class="greybar"></div>
 
     <!-- Contact Info Pane -->
+
     <div class="contact">
         <b>Contact Info</b>    <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/><br />
         <img class="logo" src="{{ url_for('.static', filename='1348333996_email.png') }}" /> Email<br />
@@ -52,17 +80,26 @@
     </div>
 
     <!-- Content panes -->
-    <div class="education">
-        <b>Education</b>  <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/>
-        <br /><br />
-        University of Cincinnati
-    </div>
-    <div class="positions">
-        <b>Positions</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
-        <br /><br />
-        Worked at...
+    <div class="content">
+        <div class="leftContent">
+            <b>Positions</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
+            <br /><br />
+            Worked at...
+            <br /><br /><br /><br />
+            <b>Education</b>  <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}" style="float:right"/>
+            <br /><br />
+            University of Cincinnati
+        </div>
+        <div class="centerContent">
+            <b>Research Interests</b> <img class="logo" src="{{ url_for('.static', filename='1348333038_page_white_edit.png') }}"  align="right"/>
+            <br /><br />
+            Artificial Intelligence
 
-    </div>
+        </div>
+        <div class="rightContent">
+            placeholder
+        </div>
+    </div> 
     
 </div> 
 {% endblock %}
