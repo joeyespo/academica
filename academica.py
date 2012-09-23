@@ -33,6 +33,8 @@ def view():
 @app.route('/university/<username>')
 def university(username):
     item = seeds.find(lambda x: x['username'] == username, seeds.universities)
+    if not item:
+        abort(404)
     return render_template('university.html', university=item)
 
 
