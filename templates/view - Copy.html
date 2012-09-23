@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block priority_scripts %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
+
+{% endblock %}
+
+{% block page %}
+<div class="profile">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="header">
+                <div class="container">
+                    <a class="brand" href="/">Test
+                       <!-- <img class="logo" src="{{ url_for('.static', filename='academicaLogo.png') }}" /> -->
+                    </a>
+                    <div class="nav-collapse collapse">
+                    <div class="nav"></div>
+                        <form class="navbar-form pull-right" >
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div> 
+   
+<!--    </div
+       <div class="header">
+        <div class="span10">Academica<br /></div>
+        <div class="span2 offset10">Login Placeholder</div>
+    </div>-->
+
+{% endblock %}

@@ -9,17 +9,22 @@ Black: #000
 Dark Grey: #333
 
 TITLES
-font-family: 'Patua One', cursive;
 
 BODY COPY / LINKS
 font-family: 'Source Sans Pro', sans-serif;
 */
+
 
 body 
 {
     margin: 0;
     padding: 0;
 }   
+
+.clear
+{
+    clear:both;
+}
 .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container 
 {
     width:auto;
@@ -34,6 +39,9 @@ body
     background-color:White;
     height:100%;
     width:100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:14px;
+    color:black;
 }
 
 .logo
@@ -61,23 +69,58 @@ body
     width:150px;
     padding-top:25px;
     float:left;
-    vertical-align:bottom;
     border: 2;
+}
+
+.nameContainer
+{
+    padding-top:25px;
+    height:108px;
+    margin-left:150px;
+    padding-left:10px;
+    width:100%;
 }
 
 .name
 {
-    padding-top:25px;
-    height:80px;
-    font-size:16px;
+    font-family: 'Patua One', cursive;
+    font-size:24px;
+    font-weight:bold;
+    float:left;
+}
+
+.horizontalFiller
+{
+    float:left;
     width:100%;
+}
+
+.nameContainer .horizontalFiller
+{
+    height:24px;
+}
+
+.quickBio1
+{
+    height:auto;
+    width:50%;
+    float:left;
+}
+
+.quickBio2
+{
+    height:auto;
+    width:50%;
+    float:left;
 }
 
 .usernav
 {
-    height:20px;
-    width:auto;
-    vertical-align:bottom;
+    height:42px;
+    width:100%;
+    padding-left:150px;
+    margin-left:10px;
+    
 }
 
 .greybar
@@ -91,33 +134,60 @@ body
 {
     height:400px;
     width:150px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:14px;
-    color:black;
     float:left;
     padding-top:10px;
   
 }
 
-.education
+.profile .content
 {
-    width:40%;
-    height:auto;
-    float:left;
+    margin-left:150px;
+    padding-left:10px;
+    width:100%;
+    height:100%;
     padding:10px;
+    
+}
+.profile .leftContent
+{
+    width:30%;
+    height:100%;
+    float:left;
 }
 
-.positions
+.profile .centerContent
 {
-    padding:10px;
-    width:40%;
+    width:30%;
+    height:100%;
     height:auto;
     float:left;
 }
+
+.profile .rightContent
+{
+    width:30%;
+    height:100%;
+    height:auto;
+    float:left;
+}
+.titles
+{
+    font-family: 'Patua One', cursive;
+    font-size:16px;
+    float:left;
+}
+
+.nameContainer .titles
+{
+    padding-top:3px;
+    color:#999
+}
+
+    
 /*
 .navbar .brand 
 {
-    font-family: 'Patua One', cursive;
+ 
     color:White;
     float:left;
     margin:0;
