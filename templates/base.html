@@ -6,11 +6,21 @@
   <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <title>{% block title %}Academica{% endblock %}</title>
+<<<<<<< HEAD
 
   <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.png') }}" />
 
   <link rel="stylesheet" href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" />
+=======
+  <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" />
+  <link rel="shortcut icon" href="{{ url_for('.static', filename='favicon.png') }}" />
+  {% block override_styles %}
+  <link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
+  {% endblock %}
+>>>>>>> acb62eeffc6aa20b0a3e743bf0edd736fd2e4ee0
   {% block styles %}{% endblock %}
+  <script src="{{ url_for('.static', filename='modernizr.js') }}"></script>
   {% block priority_scripts %}{% endblock %}
 </head>
 <body>

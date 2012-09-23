@@ -4,7 +4,8 @@ Academica
 The academic site.
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
+import seeds
 
 __version__ = '0.1'
 
@@ -27,6 +28,20 @@ def index():
 @app.route('/view')
 def view():
     return render_template('view.html')
+
+
+@app.route('/university/<name>')
+def university(name):
+    item = seeds.find(lambda x: x['username'] == name, seeds.universities)
+    return render_template('university.html', university=item)
+
+
+@app.route('/<username>')
+def profile(username):
+    user = seeds.find(lambda x: x['username'] == username, seeds.users)
+    if not user:
+        abort(404)
+    return render_template('profile.html', user=user)
 
 
 # Run development server with the development settings
