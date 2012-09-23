@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" />
+{% endblock %}
+
+{% block priority_scripts %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block page %}
+<!-- Navigation Bar - Universal? -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">
+                <img class="icon" src="{{ url_for('.static', filename='academicaLogo.png') }}" />
+            </a>
+            <div class="nav-collapse collapse">
+            <div class="nav"></div>
+                <form class="navbar-form pull-right" >
+                    <input class="span2" type="text" placeholder="Email">
+                    <input class="span2" type="password" placeholder="Password">
+                    <button type="submit" class="btn">Sign in</button>
+                </form>
+            </div
+        </div>
+    </div>  
+</div>
+        
+<div class="profile">
+    <!-- Profile Picture and NavButtons -->
+    <div class="picnav">
+        <div class="profpic"><img src="{{ url_for('.static', filename='profileSilhouette.png') }}" style="width:100%;height:100%" /></div>
+        <div class="bioContainer">
+            <div class="nameContainer">
+                <div class="name">Tom Bachmann </div>
+                <div class="titles">PhD, Computer Science</div>
+            </div>
+
+                <div class="quickBio1">
+                    <div class="titles">
+                        Me
+                        <br />
+                        Myself <br />
+                        More Info
+                    </div>
+                </div>
+
+                <div class="quickBio2">
+                    <div class="titles">
+                        Test<br />
+                        test2<br />
+                    </div>
+                </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <div class="usernav">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#">Profile</a>
+                </li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">JobTalk</a></li>
+                <li><a href="#">Workshop</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="greybar"></div>
+
+    <!-- Contact Info Pane -->
+
+    <div class="contact">
+        <b>Contact Info</b>    <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+        <img class="icon" src="{{ url_for('.static', filename='email.png') }}" /> Email<br />
+        <img class="icon" src="{{ url_for('.static', filename='phone.png') }}" /> Phone<br />
+        <br /><br />
+        <img class="icon" src="{{ url_for('.static', filename='online.png') }}" /> Online/Offline<br />
+        <img class="icon" src="{{ url_for('.static', filename='group.png') }}" /> Refer a Friend<br />
+    </div>
+
+    <!-- Content panes -->
+    <div class="content">
+        <div class="leftContent">
+            <div class="titles">Positions</div> <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+            <br /><br />
+            Worked at...
+            <br /><br /><br /><br />
+            <div class="titles">Education</div>   <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+            <br /><br />
+            University of Cincinnati
+        </div>
+        <div class="centerContent">
+            <div class="titles">Research Interests</div>  <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+            <br /><br />
+            Artificial Intelligence
+
+        </div>
+        <div class="rightContent">
+            <div class="titles">placeholder</div> <img class="editButton" src="{{ url_for('.static', filename='edit.png') }}"/><br />
+        </div>
+    </div> 
+    
+</div> 
+{% endblock %}

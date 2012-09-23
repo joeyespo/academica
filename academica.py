@@ -26,6 +26,12 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/<username>/research')
+def research(username):
+    # TODO: data
+    return render_template('research.html')
+
+
 @app.route('/university/<username>')
 def university(username):
     item = seeds.find(lambda x: x['username'] == username, seeds.universities)
