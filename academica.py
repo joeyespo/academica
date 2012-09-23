@@ -4,7 +4,7 @@ Academica
 The academic site.
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 import seeds
 
 __version__ = '0.1'
@@ -32,8 +32,10 @@ def view():
 
 @app.route('/<username>')
 def profile(username):
-    # TODO: Use real data
-    return render_template('profile.html', user=seeds.users['lee.ngo'])
+    user = seeds.find(lambda x: x['username'] == username, seeds.users)
+    if not user:
+        abort(404)
+    return render_template('profile.html', user=user)
 
 
 # Run development server with the development settings

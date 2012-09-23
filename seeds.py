@@ -2,9 +2,9 @@
 Seed data.
 """
 
-users = {
-    'lee.ngo': {
-        'username': 'lee.ngo',
+users = [
+    {
+        'username': 'lee_ngo',
         'first': 'Lee',
         'last': 'Ngo',
         'email': 'lee.ngo@gmail.com',
@@ -14,4 +14,10 @@ users = {
         'education': 'TODO',    # HTML
         'positions': 'TODO',    # HTML
     },
-}
+]
+
+
+def find(function, items):
+    for item in items:
+        if function(item):
+            return item
