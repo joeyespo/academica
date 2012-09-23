@@ -31,7 +31,17 @@ def view():
 
 @app.route('/<username>')
 def profile(username):
-    return render_template('profile.html', username=username)
+    # TODO: Use real data
+    return render_template('profile.html', user={
+        'first': 'Lee',
+        'last': 'Ngo',
+        'email': 'lee.ngo@gmail.com',
+        'phone': '412-555-5555',
+        'hours': 'I NEVER SLEEP',
+        'available': True,
+        'education': 'TODO',    # HTML
+        'positions': 'TODO',    # HTML
+    })
 
 
 # Run development server with the development settings
