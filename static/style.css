@@ -205,18 +205,11 @@ body
     background-color:#333;
     color:White;
 } 
-.usernav li a:hover
-{
-    background-color:#333;
-    color:White;
-} 
 
 
-.usernav .activeTab li a
+.usernav .active li a
 {
-    
     font-weight:bold;   
-    background-color:Aqua;
 }
 
 .usernav .activeTab hover
