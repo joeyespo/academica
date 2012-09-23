@@ -15,28 +15,106 @@ BODY COPY / LINKS
 font-family: 'Source Sans Pro', sans-serif;
 */
 
-body {
-  margin: 0;
-  padding: 0;
+body 
+{
+    margin: 0;
+    padding: 0;
+}   
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container 
+{
+    width:auto;
+    height:42px;
+    background-color:#030;
 }
 
 .profile 
 {
     margin:0;
-    padding:0;
+    padding:0px 0px 0px 10px;
     background-color:White;
-    font-family: 'Patua One', cursive;
-    font-size:36px;
+    height:100%;
+    width:100%;
 }
 
-.header
+.logo
 {
-    height:38px;
-    background-color:#030;
-    font-family: 'Patua One', cursive;
-    color:White;
+    padding:0px 0px 0px 10px;
 }
 
+.profile .container
+{
+    background-color:White;
+}
+
+.picnav
+{
+    padding:0;   
+    height:175px;
+    width:100%;
+    font-family:'Patua One', cursive;
+    color:black;
+}
+
+.profpic
+{
+    height:150px;
+    width:150px;
+    padding-top:25px;
+    float:left;
+    vertical-align:bottom;
+    border: 2;
+}
+
+.name
+{
+    padding-top:25px;
+    height:80px;
+    font-size:16px;
+    width:100%;
+}
+
+.usernav
+{
+    height:20px;
+    width:auto;
+    vertical-align:bottom;
+}
+
+.greybar
+{
+    height:5px;
+    width:100%;
+    background-color:#999;
+}
+
+.contact
+{
+    height:400px;
+    width:150px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:14px;
+    color:black;
+    float:left;
+    padding-top:10px;
+  
+}
+
+.education
+{
+    width:40%;
+    height:auto;
+    float:left;
+    padding:10px;
+}
+
+.positions
+{
+    padding:10px;
+    width:40%;
+    height:auto;
+    float:left;
+}
+/*
 .navbar .brand 
 {
     font-family: 'Patua One', cursive;
