@@ -5,7 +5,6 @@ The academic site.
 """
 
 from flask import Flask, render_template, abort
-from flask.ext.pymongo import PyMongo
 import seeds
 
 __version__ = '0.1'
@@ -18,10 +17,6 @@ app.config.from_object('default_config')
 if __name__ == '__main__':
     app.config.from_pyfile('dev_config.py', silent=True)
 app.config.from_envvar('SETTINGS_MODULE', silent=True)
-
-# Setup database
-driver = app.config['MONGO_OBJECT'] if app.config.get('MONGO_OBJECT') else PyMongo
-mongo = driver(app)
 
 
 #Views
@@ -43,8 +38,7 @@ def university(name):
 
 @app.route('/<username>')
 def profile(username):
-    #user = seeds.find(lambda x: x['username'] == username, seeds.users)
-    user = mongo.db.users.find_one({'username': username})
+    user = seeds.find(lambda x: x['username'] == username, seeds.users)
     if not user:
         abort(404)
     return render_template('profile.html', user=user)
