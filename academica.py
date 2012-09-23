@@ -30,6 +30,12 @@ def view():
     return render_template('view.html')
 
 
+@app.route('/university/<name>')
+def university(name):
+    item = seeds.find(lambda x: x['username'] == name, seeds.universities)
+    return render_template('university.html', university=item)
+
+
 @app.route('/<username>')
 def profile(username):
     user = seeds.find(lambda x: x['username'] == username, seeds.users)

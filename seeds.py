@@ -16,6 +16,14 @@ users = [
     },
 ]
 
+universities = [
+    {
+        'username': 'LeeU',
+        'title': 'Lee University',
+        'users': ['lee_ngo'],
+    },
+]
+
 
 def find(function, items):
     for item in items:
